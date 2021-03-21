@@ -1,18 +1,17 @@
 
 
-
-
-
-.navbar{
+.header{
     background-color: red;
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     justify-content: center;
-    height: 100px;
-    
+    height: 100px;  
 }
-/* .card{
 
 
-} */
+.card-title{
+    background-color:blue ;
+    color: white;
+}
+
 
