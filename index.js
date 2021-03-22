@@ -3,7 +3,7 @@ const fs = require("fs");
 const generateHTML= require("./generateHTML.js")
 
 
-
+const employees = []
 
 const Employee = require("./lib/Employee.js");
 const Manager = require("./lib/Manager.js");
