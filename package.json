@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "This application is a",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobinator/Team-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dobinator/Team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/dobinator/Team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}

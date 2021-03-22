@@ -8,8 +8,6 @@
 
 
 
-// const generateHTML = answers;
-
 
 
 
@@ -24,5 +22,12 @@ function generateHTML(data){
 
 
 
-    
+
 }
+
+
+
+
+
+
+module.exports = generateHTML;
