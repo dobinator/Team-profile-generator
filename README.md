@@ -1,4 +1,4 @@
 # Team-profile-generator
 
-This application is a 
+This application is a  
 

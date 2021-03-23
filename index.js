@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateHTML= require("./generateHTML.js")
+const generateHTML= require("./generateHTML.js"); 
+const mockup = require("./src/mockup.html");
+const styles = require("./src/styles.css"); 
 
 
 const employees = []
