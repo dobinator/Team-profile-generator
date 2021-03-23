@@ -1,6 +1,4 @@
-const Manager = require("./lib/Manager")
-
-
+const Manager = require("../lib/Manager.js")
 
 describe ("Manager", ()=> {
     describe ("Initialization", ()=> {
@@ -31,7 +29,7 @@ describe ("Manager", ()=> {
     
     test("Can set Office Number attribute with constructor", ()=> {
         const officeNum = 123;
-        const e = new Manager("Emily", 3, "Emily.Dobson@gmail.com"); 
+        const e = new Manager("Emily", 3, "Emily.Dobson@gmail.com", officeNum); 
         expect(e.officeNum).toBe(officeNum);
     });
     });
@@ -50,13 +48,10 @@ describe ("Manager", ()=> {
           expect(e.getEmail()).toBe(email);
         });
     
-        test("Can get role via getRole() method", ()=> {
-            const e= new Manager("Emily", 3, "Emily.Dobson@gmail.com");
-            expect(e.getRole()).toBe("Manager");
-        });
         test("Can get office number via get officeNum() method", () => {
-            const e = new Engineer ("Emily", 3, "Emily.Dobson@gmail.com", "Manager");
-            expect(e.getOfficeNum()).toBe ("officeNum"); 
-    
+            const officeNum = 123;
+            const e = new Manager ("Emily", 3, "Emily.Dobson@gmail.com", officeNum);
+            expect(e.getOfficeNum()).toBe(officeNum); 
+            
         })
     });

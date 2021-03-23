@@ -1,4 +1,4 @@
-const Intern= require("./lib/Intern");
+const Intern= require("../lib/Intern.js");
 
 describe ("Intern", ()=> {
     describe ("Initialization", ()=> {
@@ -29,7 +29,7 @@ describe ("Intern", ()=> {
     
     test("Can set school attribute with constructor", ()=> {
         const school = "U of A";
-        const e = new Intern ("Erin", 2, "Erin.Moore@gmail.com"); 
+        const e = new Intern ("Erin", 2, "Erin.Moore@gmail.com", school); 
         expect(e.school).toBe(school);
     });
     });
@@ -48,13 +48,10 @@ describe ("Intern", ()=> {
           expect(e.getEmail()).toBe(email);
         });
     
-        test("Can get role via getRole() method", ()=> {
-            const e= new Intern("Erin", 4, "Erin.Moore@gmail.com");
-            expect(e.getRole()).toBe("Intern");
-        });
         test("Can get school via getSchool() method", () => {
-            const e = new Intern ("Erin", 4, "Erin.Moore@gmail.com", "Intern");
-            expect(e.getSchool()).toBe ("school"); 
+            const school = "U of A";
+            const e = new Intern ("Erin", 4, "Erin.Moore@gmail.com", school);
+            expect(e.getSchool()).toBe (school); 
     
         })
     });

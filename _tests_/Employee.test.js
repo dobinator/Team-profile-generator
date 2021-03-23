@@ -1,4 +1,4 @@
-const Employee = require("./lib/Employee");
+const Employee = require("../lib/Employee.js");
 
 describe("Employee", () => {
   describe("Initialization", () => {
@@ -41,8 +41,5 @@ describe("getters", () => {
     expect(e.getEmail()).toBe(email);
   });
 
-  test("Can get role via getRole() method", () => {
-    const e = new Employee("James", 1, "test@test.com");
-    expect(e.getRole()).toBe("Employee");
-  });
+  
 });

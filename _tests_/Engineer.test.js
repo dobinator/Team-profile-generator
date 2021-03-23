@@ -29,7 +29,7 @@ test("Can set email attribute with constructor", ()=> {
 
 test("Can set github attribute with constructor", ()=> {
     const gitHub = "ManuRaja";
-    const e = new Engineer ("Manu", 2, "Manu.Raja@gmail.com"); 
+    const e = new Engineer ("Manu", 2, "Manu.Raja@gmail.com", gitHub); 
     expect(e.gitHub).toBe(gitHub);
 });
 });
@@ -48,13 +48,10 @@ describe("getters", ()=> {
       expect(e.getEmail()).toBe(email);
     });
 
-    test("Can get role via getRole() method", ()=> {
-        const e= new Engineer("Manu", 2, "Manu.Raja@gmail.com");
-        expect(e.getRole()).toBe("Engineer");
-    });
     test("Can get gitHub via get gitHub() method", () => {
-        const e = new Engineer ("Manu", 2, "Manu.Raja@gmail.com", "Engineer");
-        expect(e.getGitHub()).toBe ("GitHub"); 
+        const gitHub = "ManuRaja";
+        const e = new Engineer ("Manu", 2, "Manu.Raja@gmail.com", gitHub);
+        expect(e.getGitHub()).toBe(gitHub); 
 
     })
 });
