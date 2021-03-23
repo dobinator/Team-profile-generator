@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateHTML = require("./generateHTML.js");
+// const generateHTML = require("./generateHTML.js");
 // const mockup = require("./src/mockup.html");
 // const styles = require("./src/styles.css");
 
@@ -10,22 +10,13 @@ const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 
-const questions = [
-  {
-    type: "list",
-    name: "team",
-    message: "Are you finished building your team?",
-    choices: ["YES", "NO"],
-  },
-];
-
 function askQuestion() {
   inquirer
     .prompt([
       {
         type: "list",
         name: "role",
-        message: "What is the employee's role",
+        message: "What is the employee's role?",
         choices: ["Manager", "Engineer", "Intern"],
       },
     ])
@@ -65,6 +56,13 @@ function addManager() {
         name: "officeNum",
         message: "What is the office number?",
       },
+      {
+        type: "list",
+        name: "team",
+        message: "Are you finished building your team?",
+        choices: ["YES", "NO"],
+      }
+
     ])
     .then((data) => {
       const manager = new Manager(
