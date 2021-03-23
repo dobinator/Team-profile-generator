@@ -8,7 +8,7 @@ test( "Can initalize an intern object", ()=>{
 }); 
 
 test ("Can set name attribute with constructor", ()=> {
-  const name = "James";
+  const name = "Manu";
   const e = new Engineer(name);
   expect(e.name).toBe(name); 
 
@@ -21,10 +21,16 @@ test ("can set attribute with constructor", ()=> {
 });
 
 test("Can set email attribute with constructor", ()=> {
-   const email = "ManuR@gmail.com";
+   const email = "Manu.Raja@gmail.com";
    const e = new Engineer("Manu", 2, email);
 
    expect(e.email).toBe(email);
+});
+
+test("Can set github attribute with constructor", ()=> {
+    const gitHub = "ManuRaja";
+    const e = new Engineer ("Manu", 2, "Manu.Raja@gmail.com"); 
+    expect(e.gitHub).toBe(gitHub);
 });
 });
 });
@@ -32,18 +38,23 @@ test("Can set email attribute with constructor", ()=> {
 describe("getters", ()=> {
     test("Can get name via getName() method", ()=>{
      const name ="Manu";
-     const e = new Engineer(name, 2, "ManuR@gmail.com");
+     const e = new Engineer(name, 2, "Manu.Raja@gmail.com");
      expect(e.getName()).toBe(name);
     });
 
     test("Can get id via getId() method", ()=> {
-      const email = "ManuR@gmail.com";
-      const e = new Engineer("Manu", 2, "ManuR@gmail.com");
+      const email = "Manu.Raja@gmail.com";
+      const e = new Engineer("Manu", 2, "Manu.Raja@gmail.com");
       expect(e.getEmail()).toBe(email);
     });
 
     test("Can get role via getRole() method", ()=> {
-        const e= new Engineer("Manu", 2, "ManuR@gmail.com");
+        const e= new Engineer("Manu", 2, "Manu.Raja@gmail.com");
         expect(e.getRole()).toBe("Engineer");
     });
+    test("Can get gitHub via get gitHub() method", () => {
+        const e = new Engineer ("Manu", 2, "Manu.Raja@gmail.com", "Engineer");
+        expect(e.getGitHub()).toBe ("GitHub"); 
+
+    })
 });

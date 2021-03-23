@@ -22,7 +22,6 @@ describe("Employee", () => {
     test("Can set email attribute with constructor", () => {
       const email = "test@test.com";
       const e = new Employee("James", 1, email);
-
       expect(e.email).toBe(email);
     });
   });
