@@ -4,7 +4,9 @@ const generateHTML = require("./generateHTML.js");
 
 const styles = require("./src/styles.css");
 
-const employees = [];
+const boss = [];
+const tech = [];
+const student = []; 
 
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
@@ -28,6 +30,7 @@ function askQuestion() {
       } else if (data.role === "Intern") {
         addIntern();
       } else {
+        
         init();
       }
     });
@@ -71,8 +74,8 @@ function addManager() {
         data.email,
         data.officeNum
       );
-      employees.push(manager);
-      console.log(employees);
+      boss.push(manager);
+      console.log(boss);
       askQuestion();
     });
 
@@ -91,7 +94,7 @@ function addEngineer() {
     ])
     .then((data) => {
       const engineer = new Engineer(data.gitHub);
-      employees.push(engineer);
+      tech.push(engineer);
       console.log(engineer);
       askQuestion();
     });
@@ -108,7 +111,7 @@ function addIntern() {
     ])
     .then((data) => {
       const intern = new Intern(data.school);
-      emoployees.push(intern);
+      student.push(intern);
       console.log(intern);
       askQuestion();
     });
