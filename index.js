@@ -11,7 +11,7 @@ const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 
-const init= () =>{
+const init = () =>{
 askQuestion()
 .then((data) =>       
 fs.writeFile("./dist/index.html", generateHTML(data)))
@@ -131,25 +131,25 @@ function addIntern() {
     });
 }
 
-// const generateHTML = (boss, tech, student) => {
-//   console.log(boss, tech, student);
+const generateHTML = (boss, tech, student) => {
+  console.log(boss, tech, student);
   
-//   let finalHTML = header;
+  let finalHTML = header;
   
-//   boss.forEach(i => {
-//       let bosscard = createManager(i);
-//       finalHTML += bosscard
-//   })
-//   tech.forEach(i => {
-//       let techcard = createEngineer(i);
-//       finalHTML += techcard
-//   })
-//   student.forEach(i => {
-//       let studentcard = createIntern(i);
-//       finalHTML += studentcard
-//   })
-//   return finalHTML;
-//   };
+  boss.forEach(i => {
+      let bosscard = createManager(i);
+      finalHTML += bosscard
+  })
+  tech.forEach(i => {
+      let techcard = createEngineer(i);
+      finalHTML += techcard
+  })
+  student.forEach(i => {
+      let studentcard = createIntern(i);
+      finalHTML += studentcard
+  })
+  return finalHTML;
+  };
 
 
 
