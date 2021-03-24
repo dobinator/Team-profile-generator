@@ -12,6 +12,15 @@ const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 
+function init(){
+// calls the askQuestion function
+// prompt the user with the first question
+//runs through the questions, return the team data back to the init
+//the init function should have a .then()call back function that will begin rendering the html, use writeFile
+
+
+}
+
 function askQuestion() {
   inquirer
     .prompt([
@@ -21,6 +30,12 @@ function askQuestion() {
         message: "What is the employee's role?",
         choices: ["Manager", "Engineer", "Intern"],
       },
+     {
+     type: "list",
+     name: "team", 
+     message: "Are you done building your team?",
+     choices: ["Yes", "No"],
+     },
     ])
     .then((data) => {
       if (data.role === "Manager") {
@@ -30,7 +45,7 @@ function askQuestion() {
       } else if (data.role === "Intern") {
         addIntern();
       } else {
-        
+
         init();
       }
     });
@@ -61,7 +76,7 @@ function addManager() {
       },
       {
         type: "list",
-        name: "team",
+        name: "teamDone",
         message: "Are you finished building your team?",
         choices: ["YES", "NO"],
       }
@@ -117,6 +132,27 @@ function addIntern() {
     });
 }
 
+const generateHTML = (boss, tech, student) => {
+  console.log(boss, tech, student);
+  
+  let finalHTML = header;
+  
+  boss.forEach(i => {
+      let bosscard = createManager(i);
+      finalHTML += bosscard
+  })
+  tech.forEach(i => {
+      let techcard = createEngineer(i);
+      finalHTML += techcard
+  })
+  student.forEach(i => {
+      let studentcard = createIntern(i);
+      finalHTML += studentcard
+  })
+  return finalHTML;
+  };
+
+
 // TODO: Create a function to write HTML file
 function writeToFile(fileName, data) {
   return fs.writeFile(fileName, data, (err) =>
@@ -127,14 +163,3 @@ function writeToFile(fileName, data) {
 
 writeToFile()
 
-
-// //  Create a function to initialize app
-// function init(){
-// .then(data => {
-// writeToFile ("./dist/team.html", generateHTML(data))
-// }
-
-
-// })
-
-// init()

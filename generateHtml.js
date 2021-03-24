@@ -109,6 +109,4 @@ const footer= `</body>
 
 
 
-
-
 module.exports = generateHTML;
