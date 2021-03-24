@@ -1,9 +1,11 @@
 
 // create a function to generate HTML
-function generateHTML(data){
+// function generateHTML(data){
+
+const header =
 `
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +24,8 @@ function generateHTML(data){
     <div class="team-area header col-12 jumbotron mb-3"></div> 
     <h1 class ="text-center">My Team</h1>
     </div>`
-}
-generateHTML() 
+
+// generateHTML() 
 
 
 function createManager(){
@@ -38,13 +40,12 @@ function createManager(){
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}  </li>
-        <li class ="list-group-item">${data.email}<a href= #></a></li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
         <li class= "list-group-item">${data.officeNum}</li>
     </ul>
     </div>`
 
-}
-
+}; 
 
 function createEngineer(){
 `
@@ -56,8 +57,8 @@ function createEngineer(){
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item">${data.email}<a href= #></a></li>
-        <li class= "list-group-item">${data.gitHub}</li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
+        <li class= "list-group-item"><a href=https://github.com/${data.gitHub}</a></li>
     </ul>
     </div>
     <div class ="card employee-card">
@@ -68,11 +69,11 @@ function createEngineer(){
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item">${data.email}<a href= #></a></li>
-        <li class= "list-group-item">${data.gitHub}</li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
+        <li class= "list-group-item">a href=https://github.com/${data.gitHub}</a></li>
     </ul>
     </div>`
-}
+};
 
 function createIntern(){
     ` 
@@ -84,7 +85,7 @@ function createIntern(){
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item">${data.email}<a href= #></a></li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
         <li class= "list-group-item">${data.school}</li>
     </ul>
     </div>
@@ -96,16 +97,15 @@ function createIntern(){
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item">${data.email}<a href= #></a></li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
         <li class= "list-group-item">${data.school}</li>
     </ul>
     </div>
-
-</body>
-</html>
-`}
+`}; 
 
 
+const footer= `</body>
+</html>`
 
 
 

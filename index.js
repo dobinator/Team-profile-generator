@@ -76,7 +76,7 @@ function addManager() {
       askQuestion();
     });
 
-    
+
 }
 askQuestion();
 
@@ -128,7 +128,7 @@ writeToFile()
 // //  Create a function to initialize app
 // function init(){
 // .then(data => {
-// writeToFile ("team.html", generateHTML(data))
+// writeToFile ("./dist/team.html", generateHTML(data))
 // }
 
 
