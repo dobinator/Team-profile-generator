@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateHTML = require("./generateHTML.js");
-
 const styles = require("./src/styles.css");
 
 const boss = [];
@@ -12,14 +11,15 @@ const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 
-function init(){
-// calls the askQuestion function
-// prompt the user with the first question
-//runs through the questions, return the team data back to the init
-//the init function should have a .then()call back function that will begin rendering the html, use writeFile
+const init= () =>{
+askQuestion()
+.then((data) =>       
+fs.writeFile("./dist/index.html", generateHTML(data)))
+.then(() => console.log('Successfully wrote to index.html'))
+.catch((err) => console.error(err));
 
+ };
 
-}
 
 function askQuestion() {
   inquirer
@@ -95,8 +95,7 @@ function addManager() {
     });
 
 
-}
-askQuestion();
+};
 
 function addEngineer() {
   inquirer
@@ -132,34 +131,25 @@ function addIntern() {
     });
 }
 
-const generateHTML = (boss, tech, student) => {
-  console.log(boss, tech, student);
+// const generateHTML = (boss, tech, student) => {
+//   console.log(boss, tech, student);
   
-  let finalHTML = header;
+//   let finalHTML = header;
   
-  boss.forEach(i => {
-      let bosscard = createManager(i);
-      finalHTML += bosscard
-  })
-  tech.forEach(i => {
-      let techcard = createEngineer(i);
-      finalHTML += techcard
-  })
-  student.forEach(i => {
-      let studentcard = createIntern(i);
-      finalHTML += studentcard
-  })
-  return finalHTML;
-  };
+//   boss.forEach(i => {
+//       let bosscard = createManager(i);
+//       finalHTML += bosscard
+//   })
+//   tech.forEach(i => {
+//       let techcard = createEngineer(i);
+//       finalHTML += techcard
+//   })
+//   student.forEach(i => {
+//       let studentcard = createIntern(i);
+//       finalHTML += studentcard
+//   })
+//   return finalHTML;
+//   };
 
 
-// TODO: Create a function to write HTML file
-function writeToFile(fileName, data) {
-  return fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log("website created")
-  );
-}
-
-
-writeToFile()
 
