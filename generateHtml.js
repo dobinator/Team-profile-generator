@@ -1,10 +1,7 @@
-
-
 // create a function to generate HTML
 // function generateHTML(data){
 
-const header =
-`
+const header = `
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -24,19 +21,18 @@ const header =
     <div class = "row">
     <div class="team-area header col-12 jumbotron mb-3"></div> 
     <h1 class ="text-center">My Team</h1>
-    </div>`
+    </div>`;
 
-// generateHTML() 
+// generateHTML()
 
-
-function createManager(){
-   ` <div class= "container">
+function createManager(data) {
+  return ` <div class= "container">
         <div class ="row"></div>
     <div class ="team-area col-12 d-flec justify-content-center"></div>
     <div class ="card employee-card">
         <div class= "card-header">
     <h2 class ="card-title">${data.name} </h2>
-    <h4 class = "card-subtitle mb-2 text">${data.role}</h4>
+    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
     </div>
     <div class= "card-body">
     <ul class= "list-group">
@@ -44,70 +40,91 @@ function createManager(){
         <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
         <li class= "list-group-item">${data.officeNum}</li>
     </ul>
-    </div>`
+    </div>`;
+}
 
-}; 
-
-function createEngineer(){
-`
+function createEngineer(data) {
+  return `
     <div class ="card employee-card">
         <div class= "card-header">
     <h2 class ="card-title">${data.name}</h2>
-    <h4 class = "card-subtitle mb-2 text">${data.role}</h4>
+    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
     </div>
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}</li>
         <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item"><a href=https://github.com/${data.gitHub}</a></li>
+        <li class= "list-group-item"><a href=https://github.com/${
+          data.gitHub
+        }</a></li>
     </ul>
     </div>
     <div class ="card employee-card">
         <div class= "card-header">
     <h2 class ="card-title">${data.name}</h2>
-    <h4 class = "card-subtitle mb-2 text">${data.role}</h4>
+    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
     </div>
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">${data.id}</li>
         <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item">a href=https://github.com/${data.gitHub}</a></li>
+        <li class= "list-group-item">a href=https://github.com/${
+          data.gitHub
+        }</a></li>
     </ul>
-    </div>`
+    </div>`;
+}
+
+function createIntern(data) {
+  return ` 
+    <div class ="card employee-card">
+        <div class= "card-header">
+    <h2 class ="card-title">${data.name}</h2>
+    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
+    </div>
+    <div class= "card-body">
+    <ul class= "list-group">
+        <li class= "list-group-item">${data.id}</li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
+        <li class= "list-group-item">${data.school}</li>
+    </ul>
+    </div>
+    <div class ="card employee-card">
+        <div class= "card-header">
+    <h2 class ="card-title">${data.name}</h2>
+    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
+    </div>
+    <div class= "card-body">
+    <ul class= "list-group">
+        <li class= "list-group-item">${data.id}</li>
+        <li class ="list-group-item"><a href="mail to: ${data.email}"></a></li>
+        <li class= "list-group-item">${data.school}</li>
+    </ul>
+    </div>
+`;
+}
+
+const footer = `</body>
+</html>`;
+
+const generateHTML = (boss, tech, student) => {
+  console.log(boss, tech, student);
+
+  let finalHTML = header;
+
+  boss.forEach((i) => {
+    let bosscard = createManager(i);
+    finalHTML += bosscard;
+  });
+  tech.forEach((i) => {
+    let techcard = createEngineer(i);
+    finalHTML += techcard;
+  });
+  student.forEach((i) => {
+    let studentcard = createIntern(i);
+    finalHTML += studentcard;
+  });
+  return finalHTML;
 };
-
-function createIntern(){
-    ` 
-    <div class ="card employee-card">
-        <div class= "card-header">
-    <h2 class ="card-title">${data.name}</h2>
-    <h4 class = "card-subtitle mb-2 text">${data.role}</h4>
-    </div>
-    <div class= "card-body">
-    <ul class= "list-group">
-        <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item">${data.school}</li>
-    </ul>
-    </div>
-    <div class ="card employee-card">
-        <div class= "card-header">
-    <h2 class ="card-title">${data.name}</h2>
-    <h4 class = "card-subtitle mb-2 text">${data.role}</h4>
-    </div>
-    <div class= "card-body">
-    <ul class= "list-group">
-        <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item">${data.school}</li>
-    </ul>
-    </div>
-`}; 
-
-
-const footer= `</body>
-</html>`
-
-
 
 module.exports = generateHTML;
