@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateHTML = require("./generateHTML.js");
-// const mockup = require("./src/mockup.html");
-// const styles = require("./src/styles.css");
+const generateHTML = require("./generateHTML.js");
+
+const styles = require("./src/styles.css");
 
 const employees = [];
 
@@ -75,6 +75,8 @@ function addManager() {
       console.log(employees);
       askQuestion();
     });
+
+    
 }
 askQuestion();
 
@@ -119,12 +121,17 @@ function writeToFile(fileName, data) {
   );
 }
 
-// TODO: Create a function to initialize app
 
-// function init()
-// inquirer.prompt(questions)
+writeToFile()
+
+
+// //  Create a function to initialize app
+// function init(){
 // .then(data => {
 // writeToFile ("team.html", generateHTML(data))
+// }
+
 
 // })
+
 // init()
