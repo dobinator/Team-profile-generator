@@ -32,3 +32,7 @@ Video presentation of the application.
 
 
 
+![Team-profile-generator](./scr/images/team.png)
+
+
+
