@@ -36,7 +36,7 @@ function askQuestion() {
       } else {
         // Create our html file
         fs.writeFile(
-          "./dist/index.html",
+          "./dist/team.html",
           generateHTML(boss, tech, student),
           function (err) {}
         );

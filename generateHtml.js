@@ -36,9 +36,9 @@ function createManager(data) {
     </div>
     <div class= "card-body">
     <ul class= "list-group">
-        <li class= "list-group-item">${data.id}  </li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item">${data.officeNum}</li>
+        <li class= "list-group-item">Employee ID: ${data.id}</li>
+        <li class ="list-group-item">Email: <a href=mailto:${data.email}></a></li>
+        <li class= "list-group-item">Office: ${data.officeNum}</li>
     </ul>
     </div>`;
 }
@@ -52,28 +52,12 @@ function createEngineer(data) {
     </div>
     <div class= "card-body">
     <ul class= "list-group">
-        <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item"><a href=https://github.com/${
-          data.gitHub
-        }</a></li>
+        <li class= "list-group-item">Employee ID: ${data.id}</li>
+        <li class ="list-group-item">Email:  <a href=mailto:${data.email}></a></li>
+        <li class= "list-group-item">Github:  <a href = 'https://github.com/${data.gitHub}'</a></li>
     </ul>
     </div>
-    <div class ="card employee-card">
-        <div class= "card-header">
-    <h2 class ="card-title">${data.name}</h2>
-    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
-    </div>
-    <div class= "card-body">
-    <ul class= "list-group">
-        <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item">a href=https://github.com/${
-          data.gitHub
-        }</a></li>
-    </ul>
-    </div>`;
-}
+  `};
 
 function createIntern(data) {
   return ` 
@@ -84,27 +68,17 @@ function createIntern(data) {
     </div>
     <div class= "card-body">
     <ul class= "list-group">
-        <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}></a></li>
-        <li class= "list-group-item">${data.school}</li>
-    </ul>
-    </div>
-    <div class ="card employee-card">
-        <div class= "card-header">
-    <h2 class ="card-title">${data.name}</h2>
-    <h4 class = "card-subtitle mb-2 text">${data.getRole()}</h4>
-    </div>
-    <div class= "card-body">
-    <ul class= "list-group">
-        <li class= "list-group-item">${data.id}</li>
-        <li class ="list-group-item"><a href="mail to: ${data.email}"></a></li>
-        <li class= "list-group-item">${data.school}</li>
+        <li class= "list-group-item">Employee ID: ${data.id}</li>
+        <li class ="list-group-item">Email: <a href=mail to:${data.email}></a></li>
+        <li class= "list-group-item">school: ${data.school}</li>
     </ul>
     </div>
 `;
 }
 
-const footer = `</body>
+const footer = `
+</main> 
+</body>
 </html>`;
 
 const generateHTML = (boss, tech, student) => {
