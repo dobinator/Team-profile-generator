@@ -54,7 +54,7 @@ function createEngineer(data) {
     <ul class= "list-group">
         <li class= "list-group-item">Employee ID: ${data.id}</li>
         <li class ="list-group-item">Email: <a href ="mailto:${data.email}"><${data.email}</a></li>
-        <li class= "list-group-item">Github:  <a href = "https://github.com/${data.gitHub}"><${data.gitHub}</a></li>
+        <li class= "list-group-item">Github:  <a href = "https://github.com/${data.gitHub}"></a><${data.gitHub}</li>
     </ul>
     </div>
   `};
@@ -69,7 +69,7 @@ function createIntern(data) {
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">Employee ID: ${data.id}</li>
-        <li class ="list-group-item">Email: <a href= "mailto:${data.email}"><${data.email}</a></li>
+        <li class ="list-group-item">Email: <a href= "mailto:${data.email}"></a><${data.email}</li>
         <li class= "list-group-item">school: ${data.school}</li>
     </ul>
     </div>
