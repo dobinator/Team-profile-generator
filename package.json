@@ -1,7 +1,7 @@
 {
   "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "This application is a",
+  "description": "This application is a generator which asked prompts of the user and creates a HTML document from the answers to the prompt.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
