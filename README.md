@@ -33,7 +33,7 @@ https://youtu.be/J9PksWaVMEc
 
 
 
-![Team-profile-generator](./scr/images/team.png)
+![Team-profile-generator](/assets/team.png)
 
 
 
