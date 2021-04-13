@@ -27,8 +27,8 @@ const header = `
 
 function createManager(data) {
   return ` <div class= "container">
-        <div class ="row"></div>
-    <div class ="team-area col-12 d-flec justify-content-center"></div>
+        <div class ="row">
+    <div class ="team-area col-12 d-flex justify-content-center"></div>
     <div class ="card employee-card">
         <div class= "card-header">
     <h2 class ="card-title">${data.name} </h2>
@@ -37,9 +37,10 @@ function createManager(data) {
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">Employee ID: ${data.id}</li>
-        <li class ="list-group-item">Email: <a href="mailto:${data.email}"><${data.email}></a></li>
+        <li class ="list-group-item">Email: <a href=mailto:${data.email}><${data.email}></a></li>
         <li class= "list-group-item">Office: ${data.officeNum}</li>
     </ul>
+    </div>
     </div>`;
 }
 
@@ -53,8 +54,8 @@ function createEngineer(data) {
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">Employee ID: ${data.id}</li>
-        <li class ="list-group-item">Email: <a href ="mailto:${data.email}"><${data.email}</a></li>
-        <li class= "list-group-item">Github:  <a href = "https://github.com/${data.gitHub}"></a><${data.gitHub}</li>
+        <li class ="list-group-item">Email: <a href=mailto:${data.email}>${data.email}</a></li>
+        <li class= "list-group-item">Github:  <a href=http://github.com/${data.gitHub}>${data.gitHub}</a></li>
     </ul>
     </div>
   `};
@@ -69,8 +70,8 @@ function createIntern(data) {
     <div class= "card-body">
     <ul class= "list-group">
         <li class= "list-group-item">Employee ID: ${data.id}</li>
-        <li class ="list-group-item">Email: <a href= "mailto:${data.email}"></a><${data.email}</li>
-        <li class= "list-group-item">school: ${data.school}</li>
+        <li class ="list-group-item">Email: <a href=mailto:${data.email}>${data.email}</a></li>
+        <li class= "list-group-item">School: ${data.school}</li>
     </ul>
     </div>
 `;
