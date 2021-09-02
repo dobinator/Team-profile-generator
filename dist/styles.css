@@ -1,18 +1,11 @@
-
-
-nav{
-    background-color: red;
-    font-size: 40px;
-    color: white;
-    height: 60px;
-
-  
+* {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 
-.card-title{
-  background-color: #318CE7;
-    color: white;
+.name {
+  padding: 0;
 }
+
 
 
