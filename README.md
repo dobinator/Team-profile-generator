@@ -2,7 +2,7 @@
 
 ##Description:
 
-This application is a dynamically rendered html page which is created after the user answers prompts in the node terminal. The user would create a team profile that has generates a Manager, Engineer and Intern profile in the webpage. The application included contact information including, but not limited to: an email which is able to open in a default email page along with a github link that opens in a new tab on the browser. 
+This application is a dynamically rendered HTML page which is created after the user answers prompts in the node terminal. The user would create a team profile that has generates a Manager, Engineer and Intern profile in the webpage. The application included contact information including, but not limited to: an email which is able to open in a default email page along with a Github link that opens in a new tab on the browser. 
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ https://youtu.be/J9PksWaVMEc
 
 
 
-![Team-profile-generator](/assets/team.png)
+![Team-profile-generator](/assets/team.jpg)
 
 
 
